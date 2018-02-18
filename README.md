@@ -15,7 +15,7 @@ In:
 
 ```markdown
 ---
-component:
+components:
   counter: ./components/counter.vue
 ---
 # Show off some counter
