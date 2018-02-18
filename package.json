@@ -1,0 +1,44 @@
+{
+  "name": "vmark",
+  "version": "0.0.0",
+  "description": "Convert markdown to vue component.",
+  "repository": {
+    "url": "egoist/vmark",
+    "type": "git"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "npm run lint && jest",
+    "lint": "xo"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "marked3": "^0.5.2",
+    "prettier": "^1.10.2",
+    "vue-template-compiler": "^2.5.13",
+    "vue-template-es2015-compiler": "^1.6.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^19.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "envs": [
+      "jest"
+    ],
+    "rules": {
+      "unicorn/filename-case": "off",
+      "func-names": "off"
+    }
+  }
+}

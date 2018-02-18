@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main 1`] = `
+Object {
+  "attributes": Object {
+    "components": Object {
+      "counter": "./counter.vue",
+    },
+  },
+  "component": "import counter from './counter.vue'
+
+export default {
+  render: function render() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      'div',
+      { staticClass: 'vmark' },
+      [
+        _c('h1', { attrs: { id: 'hello' } }, [_vm._v('hello')]),
+        _vm._v(' '),
+        _c('counter', { attrs: { start: 0 } })
+      ],
+      1
+    )
+  },
+  components: {
+    counter: counter
+  }
+}
+",
+}
+`;
