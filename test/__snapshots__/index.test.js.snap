@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main 1`] = `
+exports[`basic 1`] = `
 Object {
   "attributes": Object {
     "components": Object {
@@ -27,6 +27,33 @@ export default {
   },
   components: {
     counter: counter
+  }
+}
+",
+}
+`;
+
+exports[`data 1`] = `
+Object {
+  "attributes": Object {
+    "data": Object {
+      "foo": 1,
+    },
+  },
+  "component": "export default {
+  data: function data() {
+    return {
+      foo: 1
+    }
+  },
+
+  render: function render() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c('div', { staticClass: 'vmark' }, [
+      _c('p', [_vm._v(_vm._s(_vm.foo))])
+    ])
   }
 }
 ",

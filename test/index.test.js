@@ -1,7 +1,12 @@
 const vmark = require('../')
 
-test('main', () => {
-  const markdown = `
+function snapshot(title, text) {
+  test(title, () => {
+    expect(vmark(text.trim())).toMatchSnapshot()
+  })
+}
+
+snapshot('basic', `
 ---
 components:
   counter: ./counter.vue
@@ -9,7 +14,12 @@ components:
 # hello
 
 <counter :start="0" />
-`.trim()
+`)
 
-  expect(vmark(markdown)).toMatchSnapshot()
-})
+snapshot('data', `
+---
+data:
+  foo: 1
+---
+{{ foo }}
+`)

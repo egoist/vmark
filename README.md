@@ -50,7 +50,30 @@ const { component, attributes } = vmark(input)
 // attributes: parsed front-matter
 ```
 
-The front-matter part is optional, it's only used to specify required components in vmark.
+## front-matter
+
+### components
+
+Specify required components so that we can inject import statements into final code.
+
+```markdown
+---
+components
+  counter: ./components/counter.vue
+---
+```
+
+### data
+
+Specify [`data`](https://vuejs.org/v2/api/#data) option for the component:
+
+```markdown
+---
+data:
+  count: 0
+---
+{{ count }}
+```
 
 ## API
 
