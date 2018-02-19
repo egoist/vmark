@@ -23,3 +23,10 @@ data:
 ---
 {{ foo }}
 `)
+
+snapshot('styles', `
+---
+styles:
+  - ./foo.css
+---
+`)

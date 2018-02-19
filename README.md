@@ -75,6 +75,17 @@ data:
 {{ count }}
 ```
 
+### styles
+
+Inject `import` statements for CSS files:
+
+```markdown
+---
+styles:
+  - ./foo.css
+---
+```
+
 ## API
 
 ### vmark(input, [options])

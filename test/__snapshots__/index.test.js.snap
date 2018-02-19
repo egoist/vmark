@@ -46,7 +46,6 @@ Object {
       foo: 1
     }
   },
-
   render: function render() {
     var _vm = this
     var _h = _vm.$createElement
@@ -54,6 +53,27 @@ Object {
     return _c('div', { staticClass: 'vmark' }, [
       _c('p', [_vm._v(_vm._s(_vm.foo))])
     ])
+  }
+}
+",
+}
+`;
+
+exports[`styles 1`] = `
+Object {
+  "attributes": Object {
+    "styles": Array [
+      "./foo.css",
+    ],
+  },
+  "component": "import './foo.css'
+
+export default {
+  render: function render() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c('div', { staticClass: 'vmark' })
   }
 }
 ",
