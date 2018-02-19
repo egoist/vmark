@@ -30,10 +30,10 @@ Out:
 import counter from './components/counter.vue'
 
 export default {
-  render: function render() {
+  render: function render(h) {
     return h('div', {staticClass: 'vmark'}, [
       h('h1', {attrs: {id: '..'}}, ['Show off some counter']),
-      h('counter', {attrs: {count: 0}})  
+      h('counter', {attrs: {start: 0}})
     ])
   },
   components: {
