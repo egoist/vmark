@@ -1,3 +1,4 @@
+> __💖 Using webpack? You may want <a href="https://github.com/egoist/vmark-loader">vmark-loader</a> ➡️__
 
 # vmark
 
