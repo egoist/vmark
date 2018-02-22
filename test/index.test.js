@@ -30,3 +30,7 @@ styles:
   - ./foo.css
 ---
 `)
+
+snapshot('staticRenderFns', `
+<div>hi</div>
+`)
