@@ -15,81 +15,52 @@ yarn add vmark
 In:
 
 ```markdown
----
-components:
-  counter: ./components/counter.vue
----
 # Show off some counter
 
 <counter :start="0" />
+
+<script>
+import counter from './counter.vue'
+export default {
+  components: {
+    counter
+  }
+}
+</script>
 ```
 
 Out:
 
 ```js
-import counter from './components/counter.vue'
+<template>
+  <div class="vmark">
+    <h1>Show off some counter</h1>
+    <counter :start="0" />
+  </div>
+</template>
 
+<script>
+import counter from './counter.vue'
 export default {
-  render: function render(h) {
-    return h('div', {staticClass: 'vmark'}, [
-      h('h1', {attrs: {id: '..'}}, ['Show off some counter']),
-      h('counter', {attrs: {start: 0}})
-    ])
-  },
   components: {
-    counter: counter
+    counter
   }
 }
+</script>
 ```
 
 Code:
 
 ```js
-const { component, attributes } = vmark(input)
-
-// component: generated component string
-// attributes: parsed front-matter
+const component = vmark(input)
+// Get the component in SFC format
 ```
 
-## front-matter
 
-### components
-
-Specify required components so that we can inject import statements into final code.
-
-```markdown
----
-components
-  counter: ./components/counter.vue
----
-```
-
-### data
-
-Specify [`data`](https://vuejs.org/v2/api/#data) option for the component:
-
-```markdown
----
-data:
-  count: 0
----
-{{ count }}
-```
-
-### styles
-
-Inject `import` statements for CSS files:
-
-```markdown
----
-styles:
-  - ./foo.css
----
-```
 
 ## API
 
-### vmark(input, [options])
+### vmark(input)
 
 #### input
 
@@ -100,19 +71,9 @@ Input markdown string.
 
 #### options
 
-##### options.wrap
+##### options.markdown
 
-Type: `function`<br>
-Default: `template => '<div class="vmark">' + template + '</div>'`
-
-Wrap template in a div, since Vue doesn't allow multiple root nodes.
-
-##### options.prettier
-
-Type: `boolean`<br>
-Default: `true`
-
-Prettier output.
+Options for [markdown-it](https://markdown-it.github.io/markdown-it/).
 
 ## Contributing
 

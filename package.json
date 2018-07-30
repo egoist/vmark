@@ -20,11 +20,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "marked3": "^0.5.2",
-    "prettier": "^1.10.2",
-    "vue-template-compiler": "^2.5.13",
-    "vue-template-es2015-compiler": "^1.6.0",
-    "yamljs": "^0.3.0"
+    "markdown-it": "^8.4.2"
   },
   "devDependencies": {
     "eslint-config-rem": "^3.0.0",
@@ -38,7 +34,9 @@
     ],
     "rules": {
       "unicorn/filename-case": "off",
-      "func-names": "off"
+      "func-names": "off",
+      "camelcase": "off",
+      "unicorn/no-abusive-eslint-disable": "off"
     }
   }
 }

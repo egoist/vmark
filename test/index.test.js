@@ -7,30 +7,17 @@ function snapshot(title, text) {
 }
 
 snapshot('basic', `
----
-components:
-  counter: ./counter.vue
----
 # hello
 
 <counter :start="0" />
 `)
 
-snapshot('data', `
----
-data:
-  foo: 1
----
-{{ foo }}
-`)
+snapshot('with tags', `
+<div class="foo">{{ foo }}</div>
 
-snapshot('styles', `
----
-styles:
-  - ./foo.css
----
-`)
-
-snapshot('staticRenderFns', `
-<div>hi</div>
+<style scoped>
+.foo {
+  color: red;
+}
+</style>
 `)

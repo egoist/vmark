@@ -1,104 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`basic 1`] = `
-Object {
-  "attributes": Object {
-    "components": Object {
-      "counter": "./counter.vue",
-    },
-  },
-  "component": "import counter from './counter.vue'
+"<template>
+  <div class=\\"vmark\\"><h1>hello</h1>
+<counter :start=\\"0\\" /></div>
+</template>
 
-export default {
-  render: function render() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      'div',
-      { staticClass: 'vmark' },
-      [
-        _c('h1', { attrs: { id: 'hello' } }, [_vm._v('hello')]),
-        _vm._v(' '),
-        _c('counter', { attrs: { start: 0 } })
-      ],
-      1
-    )
-  },
-  components: {
-    counter: counter
-  }
-}
-",
-}
+"
 `;
 
-exports[`data 1`] = `
-Object {
-  "attributes": Object {
-    "data": Object {
-      "foo": 1,
-    },
-  },
-  "component": "export default {
-  data: function data() {
-    return {
-      foo: 1
-    }
-  },
-  render: function render() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c('div', { staticClass: 'vmark' }, [
-      _c('p', [_vm._v(_vm._s(_vm.foo))])
-    ])
-  }
-}
-",
-}
-`;
+exports[`with tags 1`] = `
+"<template>
+  <div class=\\"vmark\\"><div class=\\"foo\\">{{ foo }}</div>
+</div>
+</template>
 
-exports[`staticRenderFns 1`] = `
-Object {
-  "attributes": Object {},
-  "component": "export default {
-  render: function render() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _vm._m(0)
-  },
-  staticRenderFns: [
-    function() {
-      var _vm = this
-      var _h = _vm.$createElement
-      var _c = _vm._self._c || _h
-      return _c('div', { staticClass: 'vmark' }, [_c('div', [_vm._v('hi')])])
-    }
-  ]
+<style scoped>
+.foo {
+  color: red;
 }
-",
-}
-`;
-
-exports[`styles 1`] = `
-Object {
-  "attributes": Object {
-    "styles": Array [
-      "./foo.css",
-    ],
-  },
-  "component": "import './foo.css'
-
-export default {
-  render: function render() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c('div', { staticClass: 'vmark' })
-  }
-}
-",
-}
+</style>"
 `;
