@@ -12,6 +12,8 @@ yarn add vmark
 
 ## Usage
 
+Basically you can write Markdown code alongside `<script>` and `<style>` tags, and these tags work just like how it is in a normal `.vue` file.
+
 In:
 
 ```markdown
@@ -31,7 +33,7 @@ export default {
 
 Out:
 
-```js
+```vue
 <template>
   <div class="vmark">
     <h1>Show off some counter</h1>
@@ -60,7 +62,7 @@ const component = vmark(input)
 
 ## API
 
-### vmark(input)
+### vmark(input, [options])
 
 #### input
 
