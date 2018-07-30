@@ -1,6 +1,6 @@
 {
   "name": "vmark",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Convert markdown to vue component.",
   "repository": {
     "url": "egoist/vmark",
