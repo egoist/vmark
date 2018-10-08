@@ -77,6 +77,12 @@ Input markdown string.
 
 Options for [markdown-it](https://markdown-it.github.io/markdown-it/).
 
+##### options.extend
+
+- Type: `(md: MarkdownIt) => void`
+
+A function whose first argument is the MarkdownIt instance.
+
 ## Contributing
 
 1. Fork it!
