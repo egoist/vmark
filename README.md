@@ -86,7 +86,7 @@ A function whose first argument is the MarkdownIt instance.
 ##### options.wrapHTML
 
 - Type: `(html: string) => string`
-- Default: <code>html => &#x60;<div class="vmark">${html}</div>&#x60;</code>
+- Default: <code>html => &#x60;&lt;div class="vmark"&gt;${html}&lt;/div&gt;&#x60;</code>
 
 Wrap the HTML in an element, because the `<template>` block in Vue SFC doesn't allow multiple root elements. You can use this option to wrap HTML inside a Vue component:
 
