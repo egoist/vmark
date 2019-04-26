@@ -20,7 +20,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "markdown-it": "^8.4.2"
+    "saber-markdown": "^0.0.3"
   },
   "devDependencies": {
     "eslint-config-rem": "^3.0.0",
