@@ -1,8 +1,8 @@
 const vmark = require('../')
 
-function snapshot(title, text) {
+function snapshot(title, text, options) {
   test(title, () => {
-    expect(vmark(text.trim())).toMatchSnapshot()
+    expect(vmark(text.trim(), options)).toMatchSnapshot()
   })
 }
 
@@ -21,3 +21,9 @@ snapshot('with tags', `
 }
 </style>
 `)
+
+snapshot('wrap html', `
+# hello
+`, {
+  wrapHTML: html => `<foo>${html}</foo>`
+})

@@ -21,3 +21,12 @@ exports[`with tags 1`] = `
 }
 </style>"
 `;
+
+exports[`wrap html 1`] = `
+"<template>
+  <foo><h1>hello</h1>
+</foo>
+</template>
+
+"
+`;

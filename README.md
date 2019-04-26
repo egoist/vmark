@@ -83,6 +83,28 @@ Options for [markdown-it](https://markdown-it.github.io/markdown-it/).
 
 A function whose first argument is the MarkdownIt instance.
 
+##### options.wrapHTML
+
+- Type: `(html: string) => string`
+- Default: <code>html => &#x60;<div class="vmark">${html}</div>&#x60;</code>
+
+Wrap the HTML in an element, because the `<template>` block in Vue SFC doesn't allow multiple root elements. You can use this option to wrap HTML inside a Vue component:
+
+```js
+const wrapHTML = html => `<render-html>${html}</render-html>`
+```
+
+Then inside the `<render-html>` component, you can access the `html` like this:
+
+```vue
+<template>
+  <div class="content">
+    <!-- `html` is available as default slot -->
+    <slot name="default"></slot>
+  </div>
+</template>
+```
+
 ## Contributing
 
 1. Fork it!
