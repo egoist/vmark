@@ -27,3 +27,19 @@ snapshot('wrap html', `
 `, {
   wrapHTML: html => `<foo>${html}</foo>`
 })
+
+snapshot('insert code above', `
+# hello
+
+\`\`\`vue {insert: 'above'}
+<button>Button</button>
+\`\`\`
+`)
+
+snapshot('insert code below', `
+# hello
+
+\`\`\`vue {insert: 'below'}
+<button>Button</button>
+\`\`\`
+`)

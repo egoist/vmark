@@ -9,6 +9,30 @@ exports[`basic 1`] = `
 "
 `;
 
+exports[`insert code above 1`] = `
+"<template>
+  <div class=\\"vmark\\"><h1>hello</h1>
+<button>Button</button>
+<pre><code class=\\"language-vue\\">&lt;button&gt;Button&lt;/button&gt;
+</code></pre>
+</div>
+</template>
+
+"
+`;
+
+exports[`insert code below 1`] = `
+"<template>
+  <div class=\\"vmark\\"><h1>hello</h1>
+<pre><code class=\\"language-vue\\">&lt;button&gt;Button&lt;/button&gt;
+</code></pre>
+<button>Button</button>
+</div>
+</template>
+
+"
+`;
+
 exports[`with tags 1`] = `
 "<template>
   <div class=\\"vmark\\"><div class=\\"foo\\">{{ foo }}</div>

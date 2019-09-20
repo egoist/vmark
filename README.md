@@ -58,7 +58,27 @@ const component = vmark(input)
 // Get the component in SFC format
 ```
 
+### Insert code block
 
+Automatically transform:
+
+````markdown
+```vue {insert: 'below'}
+<button>Button</button>
+```
+````
+
+Into:
+
+````markdown
+```vue
+<button>Button</button>
+```
+
+<button>Button</button>
+````
+
+`insert` can also be `above`.
 
 ## API
 
